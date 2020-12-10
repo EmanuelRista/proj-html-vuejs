@@ -1,0 +1,236 @@
+/* Utilities */
+
+.bg-default {
+  background-color: #eeeeee;
+}
+.pad-inside {
+  padding: 1rem;
+}
+.pad-inside-x2 {
+  padding: 2rem;
+}
+.margin-bottom-x1 {
+  margin-bottom: 1rem;
+}
+.for-v-align span {
+  vertical-align: middle;
+}
+
+.a-link {
+  text-decoration: none;
+  color: black;
+}
+.a-link:hover {
+  text-decoration: none;
+  color: #d74d52;
+}
+.empty-space-x4 {
+  padding-top: 4rem;
+}
+
+/* Globals */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  background-color: #eeeeee;
+  line-height: 1.75;
+  padding-top: 3rem;
+}
+
+/* Header */
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.hero {
+  background-image: url("img/hero.png");
+  background-color: #eeeeee;
+  height: 600px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+.checkmark {
+  color: green;
+  font-weight: bold;
+}
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+
+.footer-photo-1 {
+  background-image: url("img/preppy1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 333px;
+}
+.footer-photo-2 {
+  background-image: url("img/preppy2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 333px;
+}
+.footer-photo-3 {
+  background-image: url("img/preppy3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 333px;
+}
+.footer-photo-4 {
+  background-image: url("img/preppy4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 333px;
+}
+.footer-section {
+  background-color: #23374b;
+  line-height: 1.75;
+}
+.footer-head {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Section First */
+
+.false-box {
+  border: 0.5rem solid #eeeeee;
+  margin-top: 4rem;
+  min-height: 250px;
+}
+.svg-icons {
+  width: 3rem;
+  margin: 0.5rem 0;
+}
+.number-orange {
+  color: #f28202;
+  font-size: 2rem;
+  background-image: url("img/counter-shape-1-1-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.number-red {
+  color: #d74d52;
+  font-size: 2rem;
+  background-image: url("img/counter-shape-2-1-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.number-green {
+  color: #3adc79;
+  font-size: 2rem;
+  background-image: url("img/counter-shape-3-1-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* Section Second */
+
+.false-box-second {
+  border: 0.5rem solid #eeeeee;
+  background-color: white;
+  margin-top: 3rem;
+  width: 400px;
+  min-height: 250px;
+}
+.image-second {
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+}
+
+/* Section Third */
+
+.quote-bg {
+  background-image: url("img/quote.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Section Fourth */
+
+.image-stack {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+.image-stack-top {
+  width: 650px;
+  height: 500px;
+  grid-column: 1 / span 10;
+  grid-row: 1;
+  z-index: 0;
+  background-image: url("img/video-bg-3.jpg");
+  background-size: cover;
+}
+.image-stack-bottom {
+  width: 650px;
+  min-height: 500px;
+  grid-column: 5 / span 10;
+  margin-top: 50px;
+  margin-left: 90px;
+  grid-row: 1;
+  z-index: 1;
+}
+.video-icon {
+  width: 150px;
+  margin-top: 175px;
+}
+.events {
+  padding: 1rem;
+  margin: 0 20%;
+  margin-bottom: 4rem;
+}
+.icons {
+  height: 1.5rem;
+}
+.hr-red {
+  border: 2px solid #d74d52;
+  max-width: 3rem;
+  margin-left: 0;
+}
+
+/* Section Fifth  */
+
+/* ---> See Section Second */
+
+/* Media Query */
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  .image-stack-bottom {
+    display: none;
+  }
+  .image-stack-top {
+    width: 120%;
+  }
+  .logo {
+    height: 56px;
+    width: 80px;
+  }
+  .footer-photos {
+    display: none;
+  }
+}

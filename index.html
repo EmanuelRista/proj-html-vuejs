@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy Hompage</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Vue 3 CDN  -->
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="bg-default">
+      <div class="container">
+        <img class="logo" src="img/Logo.jpg" alt="" />
+        <nav class="navbar navbar-expand-lg navbar-light bg-default justify-content-end">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li v-for="item in items" :key="item.name" class="nav-item">
+                <a class="nav-link" href="#">
+                  {{ item.name }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="hero text-center text-dark">
+      <transition name="bounce">
+        <h1 v-if="headerTitleIsVisible">{{ headerTitle }}</h1>
+      </transition>
+      <transition name="bounce">
+        <div v-if="!headerTitleIsVisible">
+          <h2>WITH US YOU CAN LEARN ABOUT:</h2>
+
+          <ol>
+            <li>
+              <h3>
+                Adaptive Communication
+                <span class="checkmark">&checkmark;</span>
+              </h3>
+            </li>
+            <li>
+              <h3>Motivating <span class="checkmark">&checkmark;</span></h3>
+            </li>
+            <li>
+              <h3>
+                Strenght-spotting <span class="checkmark">&checkmark;</span>
+              </h3>
+            </li>
+            <li>
+              <h3>Outcome Focus <span class="checkmark">&checkmark;</span></h3>
+            </li>
+            <li>
+              <h3>Building Trust <span class="checkmark">&checkmark;</span></h3>
+            </li>
+          </ol>
+        </div>
+      </transition>
+      <div>
+        <button @click="changeHeader" class="btn btn-outline-dark btn-lg">
+          {{ learnMoreButton }}
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section id="first">
+      <div class="container text-center">
+        <h2>
+          Since 2000, weve been partnering with education leaders to<br /><strong class="text-danger">increase equity
+            and achievement</strong>
+          for all students.
+        </h2>
+        <div class="row">
+          <div class="false-box col-lg-4 col-md-4 col-sm-12">
+            <div class="bg-white pad-inside margin-bottom-x1">
+              <img class="svg-icons" src="img/svg-0.svg" alt="" />
+              <h6>Online Coaching</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam quis magnam est perferendis.
+              </p>
+            </div>
+            <h6 class="for-v-align">
+              <span class="number-orange">6500 +</span> <span>Students</span>
+            </h6>
+          </div>
+          <div class="false-box col-lg-4 col-md-4 col-sm-12">
+            <div class="bg-white pad-inside margin-bottom-x1">
+              <img class="svg-icons" src="img/svg-1.svg" alt="" />
+              <h6>Consultation</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam quis magnam est perferendis.
+              </p>
+            </div>
+            <h6 class="for-v-align">
+              <span class="number-red">200 +</span> <span>Online Courses</span>
+            </h6>
+          </div>
+          <div class="false-box col-lg-4 col-md-4 col-sm-12">
+            <div class="bg-white pad-inside margin-bottom-x1">
+              <img class="svg-icons" src="img/svg-2.svg" alt="" />
+              <h6>Life programs</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quibusdam quis magnam est perferendis.
+              </p>
+            </div>
+            <h6 class="for-v-align">
+              <span class="number-green">100 %</span> <span>Happy Clients</span>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="second">
+      <div class="container text-center">
+        <h2>Recent Courses</h2>
+        <p>
+          Whether you're considering a foundation course or an undergraduate
+          degree master's<br />or a PhD, academics is a place where students
+          thrive.
+        </p>
+        <div class="row">
+          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" src="img/pc-girl.jpg" alt="" />
+            <div class="pad-inside">
+              <h6>Free</h6>
+              <h6>UI Animation using Sketch 3, Principle App, and Flinto</h6>
+              <p>
+                This online photography course will teach you how to take amazing
+                images and even sell...
+              </p>
+              <small class="text-danger font-weight-bold">Course by: University</small>
+            </div>
+          </div>
+          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" src="img/laptop.jpg" alt="" />
+            <div class="pad-inside">
+              <h6>Free</h6>
+              <h6>The Ultimate Drawing Course - Beginner to Advanced</h6>
+              <p>
+                This online photography course will teach you how to take amazing
+                images and even sell...
+              </p>
+              <small class="text-danger font-weight-bold">Course by: University</small>
+            </div>
+          </div>
+          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" src="img/camera.jpg" alt="" />
+            <div class="pad-inside">
+              <h6>Free</h6>
+              <h6>Your Complete Guide to Photography</h6>
+              <p>
+                This online photography course will teach you how to take amazing
+                images and even sell...
+              </p>
+              <small class="text-danger font-weight-bold">Course by: University</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="third">
+      <div class="container text-center">
+        <div class="quote-bg">
+          <h2>
+            "Academics was committed to my success from the moment I attended an
+            open House. With support of caring
+            <strong class="text-danger"><u>advisors, professors, and staff</u></strong>
+            I was able to thrive in courses, gain recognition through scholaships,
+            and finish
+            <strong>with confidence in my
+              <span class="text-danger"><u>@academics</u></span> abilities</strong>."
+          </h2>
+          <br />
+        </div>
+      </div>
+    </section>
+    <section id="fourth">
+      <div class="container text-center">
+        <div class="image-stack">
+          <div class="image-stack-top">
+            <a href=""><img class="video-icon" src="img/vid.png" alt="" /></a>
+          </div>
+          <div class="image-stack-bottom bg-white pad-inside-x2">
+            <h1 class="text-white bg-danger events">Upcoming Events</h1>
+            <h5 class="text-left">
+              Princeton offers admission information sessions and student-led
+              tours to campus visitors
+            </h5>
+            <br />
+            <a href="" class="text-left a-link">
+              <h5>Learn more ></h5>
+            </a><br />
+            <h5 class="text-left">
+              Admission information session and student-led tours to campus
+              visitors
+            </h5>
+            <br />
+            <a href="" class="text-left a-link">
+              <h5>Learn more ></h5>
+            </a><br />
+            <div class="for-v-align">
+              <a href="" class="a-link"><span>Event Locations ></span>
+                <span><img class="icons" src="img/map.png" alt="" /></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fifth">
+      <div class="container text-center">
+        <h2>Latest From Our Blogs</h2>
+        <p>
+          Whether you're considering a foundation course or an undergraduate
+          degree master's<br />or a PhD, academics is a place where students
+          thrive.
+        </p>
+        <div class="row">
+          <div class="false-box-second text-left ol-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" src="img/news-3-2.jpg" alt="" />
+            <div class="pad-inside">
+              <h6 class="for-v-align">
+                <span><img class="icons" src="img/admin.png" alt="" /></span><span> Admin </span><span><img
+                    class="icons" src="img/folder.png" alt="" /></span><span> University </span>
+              </h6>
+              <h6>Peer pressure changes how teens tackle inequality</h6>
+              <hr class="hr-red" />
+              <a href="" class="a-link">Read more ></a>
+            </div>
+          </div>
+          <div class="false-box-second text-left ol-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" src="img/preppy-girl.jpg" alt="" />
+            <div class="pad-inside">
+              <h6 class="for-v-align">
+                <span><img class="icons" src="img/admin.png" alt="" /></span><span> Admin </span><span><img
+                    class="icons" src="img/folder.png" alt="" /></span><span> Education </span>
+              </h6>
+              <h6>Lewisham Live Mixtape celebrates borough's</h6>
+              <hr class="hr-red" />
+              <a href="" class="a-link">Read more > </a>
+            </div>
+          </div>
+          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" src="img/preppy-boy.jpg" alt="" />
+            <div class="pad-inside">
+              <h6 class="for-v-align">
+                <span><img class="icons" src="img/admin.png" alt="" /></span><span> Admin </span><span><img
+                    class="icons" src="img/folder.png" alt="" /></span><span> Education </span>
+              </h6>
+              <h6>Turner Prize winner's work to open Gold on Film festival</h6>
+              <hr class="hr-red" />
+              <a href="" class="a-link">Read more ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="empty-space-x4"></div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-section">
+      <div style="border-right: 15px solid white">
+        <!-- fixed bootstrap padding^^^ -->
+        <div class="row">
+          <div v-for="photo in photos" :key="photo" class="col-3 footer-photos" :class="photo.class"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row border border-secondary footer-head">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Subscribe to our newsletter"
+                aria-label="Subscribe to our newsletter" aria-describedby="basic-addon2" />
+              <div class="input-group-append">
+                <span class="input-group-text bg-danger text-white" id="basic-addon2">Register</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-6 col-sm-12 col-xs-12 text-secondary">
+            <p>
+              <span class="text-danger border-bottom border-white"><strong>Insights is Picwik</strong></span>
+              University's throught leadership publication for sharing knowledge
+              on management, technology and innovation.
+            </p>
+            <a class="a-link text-white" href="">Take me there ></a>
+          </div>
+        </div>
+        <div class="row">
+          <div v-for="footerItem in footerItems" :key="footerItem.name" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <h5 class="text-white">{{ footerItem.name }}</h5>
+            <p class="text-secondary">{{ footerItem.first }}</p>
+            <p class="text-secondary">{{ footerItem.second }}</p>
+            <p class="text-secondary">{{ footerItem.third }}</p>
+            <p class="text-secondary">{{ footerItem.fourth }}</p>
+            <p class="text-secondary">{{ footerItem.fifth }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- My JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
