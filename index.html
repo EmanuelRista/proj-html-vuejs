@@ -88,43 +88,16 @@
           for all students.
         </h2>
         <div class="row">
-          <div class="false-box col-lg-4 col-md-4 col-sm-12">
+          <div v-for="el1st in first" :key="el1st.title" class="false-box col-lg-4 col-md-4 col-sm-12">
             <div class="bg-white pad-inside margin-bottom-x1">
-              <img class="svg-icons" src="img/svg-0.svg" alt="" />
-              <h6>Online Coaching</h6>
+              <img class="svg-icons" :src="el1st.icon" alt="" />
+              <h6> {{el1st.title}} </h6>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam quis magnam est perferendis.
+                {{el1st.text}}
               </p>
             </div>
             <h6 class="for-v-align">
-              <span class="number-orange">6500 +</span> <span>Students</span>
-            </h6>
-          </div>
-          <div class="false-box col-lg-4 col-md-4 col-sm-12">
-            <div class="bg-white pad-inside margin-bottom-x1">
-              <img class="svg-icons" src="img/svg-1.svg" alt="" />
-              <h6>Consultation</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam quis magnam est perferendis.
-              </p>
-            </div>
-            <h6 class="for-v-align">
-              <span class="number-red">200 +</span> <span>Online Courses</span>
-            </h6>
-          </div>
-          <div class="false-box col-lg-4 col-md-4 col-sm-12">
-            <div class="bg-white pad-inside margin-bottom-x1">
-              <img class="svg-icons" src="img/svg-2.svg" alt="" />
-              <h6>Life programs</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam quis magnam est perferendis.
-              </p>
-            </div>
-            <h6 class="for-v-align">
-              <span class="number-green">100 %</span> <span>Happy Clients</span>
+              <span :class="el1st.howMuchClass"> {{el1st.howMuch}} </span> <span> {{el1st.who}} </span>
             </h6>
           </div>
         </div>

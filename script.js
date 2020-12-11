@@ -32,6 +32,44 @@ const header = Vue.createApp({
 
 header.mount('#header');
 
+const main = Vue.createApp({
+  data() {
+    return {
+      first: [
+        {
+          title: "Online Coaching",
+          text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quis magnam est perferendis.",
+          howMuch: "6500 +",
+          who: "Students",
+          howMuchClass: 'number-orange',
+          icon: 'img/svg-0.svg',
+        },
+        {
+          title: "Consultation",
+          text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quis magnam est perferendis.",
+          howMuch: "200 +",
+          who: "Online Courses",
+          howMuchClass: 'number-red',
+          icon: 'img/svg-1.svg',
+        },
+        {
+          title: "Life programs",
+          text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quis magnam est perferendis.",
+          howMuch: "100 %",
+          who: "Happy clients",
+          howMuchClass: 'number-green',
+          icon: 'img/svg-2.svg',
+        },
+      ],
+
+    };
+  }
+
+});
+
+main.mount('#main');
+
+
 /* Footer */
 
 const footer = Vue.createApp({
