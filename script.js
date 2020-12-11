@@ -61,7 +61,37 @@ const main = Vue.createApp({
           icon: 'img/svg-2.svg',
         },
       ],
-
+      second: [
+        {
+          title: 'UI Animation using Sketch 3, Principle App, and Flinto',
+          image: 'img/pc-girl.jpg',
+        },
+        {
+          title: 'The Ultimate Drawing Course - Beginner to Advanced',
+          image: 'img/laptop.jpg',
+        },
+        {
+          title: 'Your Complete Guide to Photography',
+          image: 'img/camera.jpg',
+        }
+      ],
+      third: [
+        {
+          title: 'Peer pressure changes how teens tackle inequality',
+          image: 'img/news-3-2.jpg',
+          foler: 'University',
+        },
+        {
+          title: 'Lewisham Live Mixtape celebrates borough\'s',
+          image: 'img/preppy-girl.jpg',
+          folder: 'Education',
+        },
+        {
+          title: 'Turner Prize winner\'s work to open Gold on Film festival',
+          image: 'img/preppy-boy.jpg',
+          folder: 'Education',
+        }
+      ]
     };
   }
 

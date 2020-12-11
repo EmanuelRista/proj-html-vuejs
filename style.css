@@ -24,9 +24,6 @@
   text-decoration: none;
   color: #d74d52;
 }
-.empty-space-x4 {
-  padding-top: 4rem;
-}
 
 /* Globals */
 
@@ -155,6 +152,7 @@ section {
   margin-top: 3rem;
   width: 400px;
   min-height: 250px;
+  margin-bottom: 4rem;
 }
 .image-second {
   width: calc(100% + 30px);

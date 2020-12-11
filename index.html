@@ -112,35 +112,12 @@
           thrive.
         </p>
         <div class="row">
-          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
-            <img class="image-second" src="img/pc-girl.jpg" alt="" />
+          <div v-for="el2nd in second" :key="el2nd.title"
+            class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" :src="el2nd.image" alt="" />
             <div class="pad-inside">
               <h6>Free</h6>
-              <h6>UI Animation using Sketch 3, Principle App, and Flinto</h6>
-              <p>
-                This online photography course will teach you how to take amazing
-                images and even sell...
-              </p>
-              <small class="text-danger font-weight-bold">Course by: University</small>
-            </div>
-          </div>
-          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
-            <img class="image-second" src="img/laptop.jpg" alt="" />
-            <div class="pad-inside">
-              <h6>Free</h6>
-              <h6>The Ultimate Drawing Course - Beginner to Advanced</h6>
-              <p>
-                This online photography course will teach you how to take amazing
-                images and even sell...
-              </p>
-              <small class="text-danger font-weight-bold">Course by: University</small>
-            </div>
-          </div>
-          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
-            <img class="image-second" src="img/camera.jpg" alt="" />
-            <div class="pad-inside">
-              <h6>Free</h6>
-              <h6>Your Complete Guide to Photography</h6>
+              <h6>{{el2nd.title}}</h6>
               <p>
                 This online photography course will teach you how to take amazing
                 images and even sell...
@@ -208,45 +185,20 @@
           thrive.
         </p>
         <div class="row">
-          <div class="false-box-second text-left ol-lg-4 col-md-4 col-sm-12">
-            <img class="image-second" src="img/news-3-2.jpg" alt="" />
+          <div v-for="el3rd in third" :key="el3rd.title" class="false-box-second text-left ol-lg-4 col-md-4 col-sm-12">
+            <img class="image-second" :src="el3rd.image" alt="" />
             <div class="pad-inside">
               <h6 class="for-v-align">
                 <span><img class="icons" src="img/admin.png" alt="" /></span><span> Admin </span><span><img
-                    class="icons" src="img/folder.png" alt="" /></span><span> University </span>
+                    class="icons" src="img/folder.png" alt="" /></span><span> {{el3rd.folder}} </span>
               </h6>
-              <h6>Peer pressure changes how teens tackle inequality</h6>
-              <hr class="hr-red" />
-              <a href="" class="a-link">Read more ></a>
-            </div>
-          </div>
-          <div class="false-box-second text-left ol-lg-4 col-md-4 col-sm-12">
-            <img class="image-second" src="img/preppy-girl.jpg" alt="" />
-            <div class="pad-inside">
-              <h6 class="for-v-align">
-                <span><img class="icons" src="img/admin.png" alt="" /></span><span> Admin </span><span><img
-                    class="icons" src="img/folder.png" alt="" /></span><span> Education </span>
-              </h6>
-              <h6>Lewisham Live Mixtape celebrates borough's</h6>
-              <hr class="hr-red" />
-              <a href="" class="a-link">Read more > </a>
-            </div>
-          </div>
-          <div class="false-box-second text-left col-lg-4 col-md-4 col-sm-12">
-            <img class="image-second" src="img/preppy-boy.jpg" alt="" />
-            <div class="pad-inside">
-              <h6 class="for-v-align">
-                <span><img class="icons" src="img/admin.png" alt="" /></span><span> Admin </span><span><img
-                    class="icons" src="img/folder.png" alt="" /></span><span> Education </span>
-              </h6>
-              <h6>Turner Prize winner's work to open Gold on Film festival</h6>
+              <h6>{{el3rd.title}}</h6>
               <hr class="hr-red" />
               <a href="" class="a-link">Read more ></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="empty-space-x4"></div>
     </section>
   </main>
   <footer id="footer">
