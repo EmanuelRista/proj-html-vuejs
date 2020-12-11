@@ -20,10 +20,10 @@
 
 <body>
   <header id="header">
-    <div class="bg-default">
+    <div class="bg-default menu">
       <div class="container">
         <img class="logo" src="img/Logo.jpg" alt="" />
-        <nav class="navbar navbar-expand-lg navbar-light bg-default justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-light bg-default">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,9 +31,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li v-for="item in items" :key="item.name" class="nav-item">
-                <a class="nav-link" href="#">
-                  {{ item.name }}
-                </a>
+                <a class="nav-link" :href="item.href"> {{item.name}} </a>
               </li>
             </ul>
           </div>

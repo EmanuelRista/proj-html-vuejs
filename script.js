@@ -6,11 +6,30 @@ const header = Vue.createApp({
   data() {
     return {
       items: [
-        { name: "Home" },
-        { name: "About" },
-        { name: "Academics" },
-        { name: "Courses" },
-        { name: "News" },
+        {
+          name: "Home",
+          href: '#'
+        },
+        {
+          name: "About",
+          href: '#first'
+        },
+        {
+          name: "Courses",
+          href: '#second'
+        },
+        {
+          name: "Events",
+          href: '#fourth'
+        },
+        {
+          name: "News",
+          href: '#fifth'
+        },
+        {
+          name: "Contacts",
+          href: '#footer'
+        }
       ],
       headerTitle: "Professional development For Coaches and Leaders",
       headerTitleIsVisible: true,

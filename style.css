@@ -32,14 +32,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   background-color: #eeeeee;
   line-height: 1.75;
   padding-top: 3rem;
 }
-
 /* Header */
-
+.menu  {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid white;
+}
 .logo {
   width: 100px;
   position: absolute;
