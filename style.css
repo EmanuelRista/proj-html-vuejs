@@ -24,6 +24,9 @@
   text-decoration: none;
   color: #d74d52;
 }
+.z-index-2 {
+  z-index: 2;
+}
 
 /* Globals */
 
